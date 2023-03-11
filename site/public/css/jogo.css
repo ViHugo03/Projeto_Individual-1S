@@ -1,0 +1,363 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: black;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+
+.header {
+    border-bottom: 3px solid;
+    background-image: linear-gradient(black 20%, white);
+}
+
+.header .container {
+    justify-content: space-between;
+}
+
+.header a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.navbar {
+    width: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.navbar1{
+    width: 33%;
+    display: flex;
+    justify-content: end;
+    list-style: none;
+}
+.titulo {
+    color: #ffffff;
+    width: fit-content;
+    font-weight: 500;
+    text-shadow: 0 0 20px rgb(255, 255, 255);
+}
+
+.banner {
+    color: white;
+    height: 80vh;
+    background-image: url("../imgs/fundo-teclado.jpg");
+    background-size: cover;
+    background-position-y: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+
+/* comeco sala */
+.sala {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.507);
+    width: 49%;
+    height: 450px;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 10px;
+    
+}
+
+
+
+.sala h3 {
+    color: white;
+    text-align: center;
+    font-family: 'Courier New';
+    font-size: 30px;
+}
+
+.sala h4 {
+    color: white;
+    text-align: center;
+    font-family: 'Courier New';
+    font-size: 30px;
+
+}
+
+.sala p {
+    color: white;
+    font-family: Arial;
+    font-size: 20px;
+    justify-content: center;
+    text-align: justify;
+}
+/* fim sala */
+
+/* comeco aula 1 */
+.aula1 {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.507);
+    width: 49%;
+    height: 490px;
+    flex-direction: column;
+    text-align: justify;    
+    align-items: center;
+    margin-top: 10px;
+    
+}
+
+.aula1 h3 {
+    color: white;
+    text-align: center;
+    font-family: 'Courier New';
+    font-size: 30px;
+}
+
+.aula1 h4 {
+    color: white;
+    text-align: center;
+    font-family: 'Courier New';
+    font-size: 30px;
+
+}
+
+.aula1 p {
+    color: white;
+    font-family: Arial;
+    font-size: 20px;
+    line-height: 25px;
+    margin: 9px;
+}
+/* fim aula 1 */
+/* comeco quiz */
+.quiz{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.507);
+    width: 49%;
+    height: 450px;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.quiz h3 {
+    color: white;
+    text-align: center;
+    font-family: 'Courier New';
+    font-size: 30px;
+}
+
+.quiz h4 {
+    color: white;
+    text-align: center;
+    font-family: 'Courier New';
+    font-size: 30px;
+
+}
+
+.quiz p {
+    color: white;
+    font-family: Arial;
+    font-size: 20px;
+    text-align: justify;
+    line-height: 25px;
+    margin: 9px;
+}
+/* pontos */
+.pontos{
+    padding: 10px;
+    display: flex;
+    width: auto;  
+    height: 30px;
+    border-radius: 5px ;
+    background-color: rgba(0, 0, 0, 0.315);    
+}
+.pontos #msg{
+    font-size: 20px;
+}
+/* botoes sala */
+
+.btn{
+    font-family: "Barlow", sans-serif;
+    border: 0;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px 15px;
+    color: white;
+    background-color: #00000000;
+    width: 120px;
+    align-self: center;
+    margin-top: 5px;
+
+}
+.btn:hover{
+    margin-top: 5px;
+    cursor: pointer;
+    font-weight: bold;    
+    text-shadow: 0 0 20px white;  
+    text-shadow: 0 0 20px white;  
+    text-shadow: 0 0 20px white;  
+    text-shadow: 0 0 20px rgb(0, 0, 0);  
+   background-color: rgba(255, 255, 255, 0.555);
+}
+
+.btn2{
+    font-family: "Barlow", sans-serif;
+    border: 0;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 5px 15px;
+    color: rgb(255, 255, 255);
+    background-color: #00000000;
+    width: 120px;
+    align-self: center;
+    justify-content: center;
+    background-color: rgba(158, 149, 149, 0.555);
+   
+}
+
+.btn2:hover{
+    cursor: pointer;
+    font-weight: bold;    
+    text-shadow: 0 0 20px white;  
+    text-shadow: 0 0 20px white;  
+    text-shadow: 0 0 20px white;  
+    text-shadow: 0 0 20px white;  
+    background-color: rgba(0, 0, 0, 0.555);
+
+}
+
+.botoes{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.507);
+    width: 49%;
+    height: 200px;
+    justify-content: space-between;
+    margin-bottom: 10px;  
+}
+.botao{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.507);
+    width: 49%;
+    height: 200px;
+    justify-content:center;
+    margin-bottom: 10px;  
+}
+
+#perguntas{
+width: 90%;
+display: flex;
+height: 50px;
+margin-top: 10px;
+font-family: Arial;
+font-size: 20px;
+justify-content: center;
+
+}
+.container1{
+    width: 90%;
+    justify-content: space-between;
+    height: 50%;
+    margin: auto;
+    display:flex ;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.062);
+   
+}
+#ipt_resp{
+    margin-top: 17px;
+    width: 98%;
+    text-align: center;
+    
+}
+
+#ranking{
+    border-radius: 5px;
+    right: 45px;
+    padding: 15px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial;
+    font-size: 25px;
+    background-color: rgba(0, 0, 0, 0.507);
+    height: auto;
+    width: 200px;
+    list-style: none;
+    justify-content: center;
+}
+
+
+
+.botao1{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.507);
+    width: 49%;
+    height: 50px;
+    justify-content:center;
+    margin-bottom: 10px;  
+}
+
+.teste{
+    position: absolute;
+    height: auto;
+    top: 120px;
+    right: 40px;
+}
+
+.notas{
+    display: flex;
+    width: 50%;
+    height:50%;
+    flex-direction: column;
+}
+
+.notas1{
+    display: flex;
+    width: 50%;
+    height:50%;
+    flex-direction: column;
+}
+
+.nota{
+    display: flex;
+    justify-content: center;
+    height: 50%;
+}
+.nota:hover{
+    cursor: pointer;
+    font-weight: bold;    
+    text-shadow: 0 0 20px white;  
+    text-shadow: 0 0 20px white;  
+    text-shadow: 0 0 20px white;  
+    text-shadow: 0 0 20px rgb(0, 0, 0);  
+   background-color: rgba(255, 255, 255, 0.555);
+}
+
+.teclado{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer {
+    background-color: #40b7c992;
+    height: 80px;
+    color: #fff;
+    display: flex;
+    font-size: 15px;
+    background-position-y: bottom;
+}
+
+.footer .container {
+    justify-content: center;
+}

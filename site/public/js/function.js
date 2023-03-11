@@ -1,0 +1,1 @@
+var totalVar = 0;

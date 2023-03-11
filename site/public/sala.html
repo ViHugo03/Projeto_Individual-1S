@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="imgs/icone-teclado.png">
+    <title> Keyboard | Classroom</title>
+
+    <link rel="stylesheet" href="css/jogo.css">
+
+    <script src="js/function.js"></script>
+
+    <script src="./js/funcoes.js"></script>
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <h1 class="titulo">Keyboard</h1>
+            <ul class="navbar">
+                <li>
+                    <button onclick="aula1()" class="btn">Aula 1</button>
+                </li>
+                <li>
+                    <button onclick="aula2()" class="btn">Aula 2</button>
+                </li>
+                <li>
+                    <button onclick="aula3()" class="btn">Aula 3</button>
+                </li>
+                <li>
+                    <button onclick="limparSessao()" class="btn">Sair</button>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="banner">
+        <div id="sala" class="sala">
+            <h3> Seja bem vindo ao curso de Teclado da Keyboard</h3>
+
+            <p>Neste curso você terá aulas sobre: Regra de formaçõs de acordes Maiores, Menores, Aumentados e
+                Diminutos, regra de formação das escalas Maiores, Menores: Menores Naturais,Menores Harmonicas, Menores
+                Melódicas e ao final de cada aula terá um quiz para testar se o
+                conteúdo foi fixado, além de exercícios de treinamento para casa.
+            </p>
+            <h4 style="margin-top: 40px;">Bons Estudos</h4>
+        </div>
+        <div class="teste">
+            <div id="pontos" class="pontos">
+                <span id="msg"></span>
+            </div>
+        </div>
+        <div id="ranking">
+            <li id="lugar1" class="lugar"></li>
+            <li id="lugar2" class="lugar"></li>
+            <li id="lugar3" class="lugar"></li>
+            <li id="lugar4" class="lugar"></li>
+            <li id="lugar5" class="lugar"></li>
+            <r></r>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <h4>Developed by Victor Hugo &hearts;SPTech &copy; 2022</h4>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    // var som1 = new Audio("songs/Eu quero conhecer Jesus.m4a");
+    var vetorNotas = [];
+    var idUsuario = sessionStorage.ID_USUARIO
+    var notaAc = 0;
+    // console.log("toquei")
+    // som1.play();
+    // setTimeout(() => {
+    //     som1.play();
+    // },1000);
+    setTimeout(() => {
+        console.log(idUsuario + " ta aparecendo")
+        fetch("/usuarios/trazer", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                idAluno: idUsuario
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+                    notaAc = json.notaAluno;
+                    msg.innerHTML = `Pontuação: ${notaAc}`;
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+    });
+
+    setTimeout(() => {
+        fetch('/usuarios/ranking', {cache: 'no-store'}).then(function (resposta) {
+            if (resposta.ok) {
+
+                resposta.json().then(function (resposta){
+
+                    console.log('notas', JSON.stringify(resposta));
+
+                    for (var i = 0; i < resposta.length; i++) {
+                        var ranking = resposta[i];
+                        vetorNotas.push(ranking.nome)
+                        if (i == 0) {
+                            lugar1.innerHTML += `${vetorNotas[0]}`
+                        }
+                        else if (i == 1) {
+                            lugar2.innerHTML += `${vetorNotas[1]}`
+                        }
+                        else if (i == 2) {
+                            lugar3.innerHTML = `${vetorNotas[2]}`
+                        }
+                        else if (i == 3) {
+                            lugar4.innerHTML = `${vetorNotas[3]}`
+                        }
+                        else if (i == 4) {
+                            lugar5.innerHTML = `${vetorNotas[4]}`
+                        } 
+
+                    }
+                })
+            }
+        })
+    });
+
+    function aula1() {
+        window.location = "aula1.html";
+        sessionStorage.ID_AULA = 1;
+    }
+
+    function aula2() {
+        sessionStorage.ID_AULA = 2;
+
+        if (pontos >= 700) {
+            window.location = "aula2.html";
+        } else {
+            alert("Você ainda não pode acessar essa aula, pois não completou a aula 1 ainda")
+        }
+    }
+
+    function aula3() {
+        sessionStorage.ID_AULA = 3;
+        if (pontos >= 700 && pontos2 >= 700) {
+            window.location = 'aula3.html'
+        } else if (pontos < 700 && pontos2 >= 700) {
+            alert("você ainda não completou a aula 1")
+            if (pontos >= 700 && pontos2 < 700) {
+                alert("Você ainda não pode acessar essa aula, pois não completou a aula 2 ainda");
+            }
+        }
+
+    }
+</script>

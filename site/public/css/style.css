@@ -1,0 +1,318 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Barlow', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: black;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+}
+
+.header {
+  border-bottom: 3px solid;
+  background-image: linear-gradient(black 20%,white);
+}
+
+.header .container {
+  justify-content: space-between;
+}
+
+.header a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.agora {
+  text-shadow: 0 0 20px rgb(0, 68, 255);
+  font-weight: 800;
+}
+
+.navbar {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  list-style: none;
+  color: #ffffff;
+}
+
+.navbar li:hover{
+  cursor: pointer;
+  font-weight: bold;    
+  text-shadow: 0 0 20px white;  
+  text-shadow: 0 0 20px white;  
+  text-shadow: 0 0 20px white;  
+  text-shadow: 0 0 20px white;  
+}
+
+.titulo {
+  color: #ffffff;
+  width: fit-content;
+  font-weight: 500;
+  text-shadow: 0 0 20px rgb(255, 255, 255);
+}
+
+.banner {
+  height: fit-content;
+  padding: 40px 0;
+  color: white;
+  background-image: url("../imgs/fundo-teclado.jpg");
+  background-size: cover;
+  background-position-y:center ;
+}
+
+#curso_input{
+text-align: center;
+}
+
+.banner .container {
+  height: 410px;
+  font-size: 36px;
+  justify-content: center;
+  align-items: center;
+}
+
+.container1 {
+  display: flex;
+  height: 400px;
+  font-size: 36px;
+  justify-content:flex-start;
+  align-items: center;
+  margin-left: 2%;
+}
+
+.container1 p{
+  background-color: rgba(0, 0, 0, 0.082);
+  border-radius: 10px;
+}
+
+.banner .container1 span {
+  font-weight: 800;
+}
+
+.tamanho-conteudo { 
+  height: fit-content !important;
+}
+
+.banner p {
+  width: 50%;
+  margin: 0;
+  padding: 0;
+  width: 280px;
+  font-size: 36px;
+}
+
+.banner .container span {
+  font-weight: 800;
+}
+
+.social {
+  background-color: #e5e5e5;
+  display: flex;
+}
+
+.social .container{
+  justify-content: center;
+}
+
+.box img {
+  background-size: cover;
+  width: 200 ;
+  height: 200px;
+}
+
+.social .container .boxes {
+  display: flex;
+  margin-bottom: 1%;
+}
+.social{
+  display: flex;
+  flex-direction: column;
+}
+
+.social p {
+  text-align: center;
+}
+
+.box {
+  margin: 50px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.box {
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-bottom:50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.descricao{
+  margin-top: 3%;
+  margin-left:15%;
+ width: 70%;
+ height: auto;
+ display: flex;
+ flex-direction: column;
+}
+
+.descricao h4{
+  text-align: center;
+  font-family: 'Courier New';
+  font-size: 40px;
+}
+
+.descricao p{
+  text-align: justify; 
+  font-family:Arial;
+  font-size: 20px;
+}
+
+.descricao a{
+  color: rgb(0, 153, 255);
+  
+}
+.descricao a:hover{
+  cursor: pointer;  
+  text-shadow: 0 0 20px white;
+  color: rgba(255, 0, 0, 0.767);
+}
+
+.descricao span{
+  color: rgb(0, 153, 255)
+}
+.descricao .btn {
+  font-family: "Barlow", sans-serif;
+  border: 0;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 10px 15px;
+  color: white;
+  background-color: #40b7c9ba;
+  width: 120px;
+  align-self: center;
+  margin-top: 5px;
+}
+
+.footer {
+  background-color: #40b7c992;
+  height: 80px;
+  color: #fff;
+  display: flex;
+  font-size: 15px;
+}
+
+.footer .container {
+  justify-content: center;
+}
+
+.banner .container .card {
+  background-color: #00000071;
+  height: fit-content;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  color: rgb(255, 255, 255);
+  align-items: center;
+  border-radius: 10px;
+ 
+}
+
+.card {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card h2 {
+  font-size: 30px;
+}
+
+.card h4 {
+  font-size: 16px;
+}
+
+.banner #div_erros_login {
+  margin-top: 15px;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* FORMULARIO */
+
+.alerta_erro{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card_erro {
+  display: none;
+  color: rgba(255, 255, 255, 0.815);
+  width: 230px;
+  position: fixed;
+  padding: 10px;
+  margin-right: 51px;
+  background-color: rgba(0, 0, 0, 0.082);
+  border-radius: 10px;
+}
+
+.card_erro #mensagem_erro{
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.formulario .tipo_campo {
+  font-size: 20px;
+  font-weight: 600 !important;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin-bottom: 10px;
+  border: 2px solid #32b9cd;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.btn {
+  font-family: "Barlow", sans-serif;
+  border: 0;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 10px 15px;
+  color: white;
+  background-color: #40b7c9ba;
+  width: 120px;
+  align-self: center;
+  margin-top: 5px;
+}
+
+.loading-div {
+  width: 50px;
+  margin: auto;
+  display: none;
+}
+
+.loading-div img {
+  height: 50px;
+  width: 50px;
+}
+
+

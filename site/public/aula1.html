@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imgs/icone-teclado.png">
+
+    <title> Keyboard | Aula 1</title>
+
+    <script src="js/funcoes.js"></script>
+    <script src="js/function.js"></script>
+    <link rel="stylesheet" href="css/jogo.css">
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <h1 class="titulo">Keyboard</h1>
+            <ul class="navbar1">
+                <li>
+                    <button onclick="limparSessao()" class="btn">Sair</button>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="banner">
+        <div id="aula1" class="aula1">
+            <h2>Escala Cromática e Escala Maior Natural</h2>
+            <p>Leitura de cifras </p>
+            <p> De agora em diante sempre que formos falar de alguma nota usaremos apenas a sua cifra:
+            </p>
+            <img src="imgs/cifra.png">
+
+        </div>
+        <div class="botao" id="botao1">
+            <button onclick="avancar(1)" class="btn2">Próxima</button>
+        </div>
+        <div id="aula2" class="aula1" style="display: none;">
+            <h2>TOM, SEMITOM, SUSTENIDO, BEMOL
+            </h2>
+            <p> Tom e semitom (ou tono e semitono): são diferenças específicas de altura, existentes entre as notas
+                musicais, isto é, são “medidas” mínimas de diferença entre grave e agudo. A diferença de um tom equivale
+                à diferença de 2 semitons. Na música de origem europeia algumas notas têm tons entre elas, enquanto
+                outras têm semitons: </p>
+            <img src="imgs/tom-e-semitom-2.png" style="height: 230px;">
+        </div>
+        <div class="botoes" id="botao2" style="display: none;">
+            <button onclick="voltar(1)" class="btn2">Voltar</button>
+            <button onclick="avancar(2)" class="btn2">Próxima</button>
+        </div>
+        <div id="aula3" class="aula1" style="display: none;">
+            <h2>Sustenido (#) e bemol (b)</h2>
+            <p> São associados às notas existentes entre notas com um tom entre si; são chamados de “Alterações”, e as
+                notas associadas a eles, de notas alteradas. Assim: </p>
+            <img src="imgs/sustenido(acidentes+musicais).jpg"
+                style="height: 163 px; width:400px ; margin-bottom:60px ;">
+        </div>
+        <div class="botoes" id="botao3" style="display: none;">
+            <button onclick="voltar(2)" class="btn2">Voltar</button>
+            <button onclick="avancar(3)" class="btn2">Próxima</button>
+        </div>
+        <div id="aula4" class="aula1" style="display: none;">
+            <h2>Escala Maior</h2>
+            <p>As Escalas Musicais podem ter diversas utilizações. Por isso elas são tão importantes para o músico. Com
+                elas, podemos criar solos, montar campos harmônicos e acordes, melodias de voz, pegar músicas de ouvido
+                entre outras coisas.</p>
+            <p>Basicamente, o que diferencia uma escala de outra é a disposição de seus intervalos, que normalmente são
+                compreendidos dentro de uma oitava.</p>
+
+            <p> A Escala Natural é composta por sete notas musicais, com dois semitons e cinco tons que são constituídas
+                através de uma fórmula que separa as notas</p>
+            <p>Veja a seguir a formação da escala maior e de seus intervalos</p>
+        </div>
+        <div class="botoes" id="botao4" style="display: none;">
+            <button onclick="voltar(3)" class="btn2">Voltar</button>
+            <button onclick="avancar(4)" class="btn2">Próxima</button>
+        </div>
+        <div id="aula5" class="aula1" style="display: none;">
+            <img src="imgs/escala maior.jpg" style="height: 300px;">
+            <p style="margin-top: 50px;">Dó - Ré menor - Mi menor - Fá - Sol - Lá menor - Si diminuto</p>
+        </div>
+        <div class="botoes" id="botao5" style="display: none;">
+            <button onclick="voltar(4)" class="btn2">Voltar</button>
+            <button onclick="avancar(5)" class="btn2">Próxima</button>
+        </div>
+        <div id="aula6" class="aula1" style="display: none;">
+            <h2>Escala Cromática</h2>
+
+            <p> Formado apenas por semitons e um conjunto de doze notas: C- C#- D- D# -E- F- F#- G- G#- A- A#- B# </p>
+            <img src="imgs/escala cromatica.jpg">
+        </div>
+        <div class="botoes" id="botao6" style="display: none;">
+            <button onclick="voltar(5)" class="btn2">Voltar</button>
+            <button onclick="avancar(6)" class="btn2">Próxima</button>
+        </div>
+        <div id="aula7" class="aula1" style="display: none;">
+            <h2>Tríade</h2>
+            <p>Conjunto de três notas que formam um acorde</p>
+            <img src="imgs/tríade.png" height="200px" width="500px">
+        </div>
+        <div class="botoes" id="botao7" style="display: none;">
+            <button onclick="voltar(6)" class="btn2">Voltar</button>
+            <button onclick="avancar(7)" class="btn2">Próximo</button>
+        </div>
+        <div id="aula8" class="aula1" style="display: none;">
+            <h2>Graus</h2>
+            <p>As notas que formam a escala são chamadas de Graus.Os graus
+                são enumerados e indicados por algarismos romanos. A primeira nota equivale ao Grau I; a segunda nota
+                equivale ao Grau II; a terceira nota, ao Grau III e assim por diante.
+                Cada grau recebe um nome, de acordo com sua função dentro da escala.
+                Vamos conhecer a seguir os sete graus da escala diatônica:
+            </p>
+            <p>
+                I. Tônica - Além de dar o nome à escala e ao tom, é a primeira nota da escala;
+                <br><br>
+                II. Supertônica - Está um grau acima da tônica e um grau abaixo da mediante. É a segunda nota da escala;
+                <br><br>
+                III. Mediante - Localizada um grau acima da supertônica e um grau abaixo da subdominante, é a terceira
+                nota da escala.
+            </p>
+
+        </div>
+        <div class="botoes" id="botao8" style="display: none;">
+            <button onclick="voltar(7)" class="btn2">Voltar</button>
+            <button onclick="avancar(8)" class="btn2">Próximo</button>
+        </div>
+        <div id="aula9" class="aula1" style="display: none;">
+            <p>IV. Subdominante - Encontra-se meio grau acima da mediante e um grau abaixo da dominante. É a quarta nota
+                da
+                escala;
+                <br><br>
+                V. Dominante - A quinta nota da escala está situada entre a Subdominante e a Superdominante. É o grau
+                mais
+                importante da escala, depois da tônica;
+                <br><br>
+                VI. Superdominante - Encontra-se um grau acima da dominante e um grau abaixo da sensível ou subtônica. É
+                a
+                sexta nota da escala;
+                <br><br>
+                VII. Sensível ou Subtônica - A sétima nota da escala pode ser chamada de duas maneiras diferentes,
+                dependen do da sua distância em relação à tônica. Quando localizada meio tom abaixo da tônica, será
+                chamada
+                de Sensível. Quando localizada um tom abaixo da tônica, será chamada de Subtônica.
+            </p>
+        </div>
+        <div class="botoes" id="botao9" style="display: none;">
+            <button onclick="voltar(8)" class="btn2">Voltar</button>
+            <button onclick="avancar(9)" class="btn2">Próximo</button>
+        </div>
+        <div id="aula10" class="aula1" style="display: none;">
+            <h2>Lição de Casa</h2>
+            <p>
+                1º: Seguindo a regra de formação de escalas maiores escreva as escalas maiores de todas as notas
+                Naturais;
+            </p>
+            <p>
+                2º: Treinar no teclado todas as escalas maiores após escrever;
+            </p>
+            <p> 3º: Treinar os intervalos da notas;</p>
+            <img src="imgs/gif piano.jpg" style="height: 200px; width:600px ;">
+        </div>
+        <div class="botoes" id="botao10" style="display: none;">
+            <button onclick="voltar(9)" class="btn2">Voltar</button>
+            <button onclick="avancar(10)" class="btn2">Próximo</button>
+        </div>
+        <div id="aula11" class="aula1" style="display: none;">
+            <h3>Ouça aqui o som das notas para ir se familiarizando</h3>
+            <div class="teclado">
+                <div class="notas">
+                    <div class="nota" onclick="tec(1)">
+                        <p>C</p>
+                    </div>
+                    <div class="nota" onclick="tec(2)">
+                        <p>C#</p>
+                    </div>
+                    <div class="nota" onclick="tec(3)">
+                        <p>D</p>
+                    </div>
+                    <div class="nota" onclick="tec(4)">
+                        <p>D#</p>
+                    </div>
+                    <div class="nota" onclick="tec(5)">
+                        <p>E</p>
+                    </div>
+                    <div class="nota" onclick="tec(6)">
+                        <p>F</p>
+                    </div>
+                </div>
+                <div class="notas1">
+                    <div class="nota" onclick="tec(7)">
+                        <p>F#</p>
+                    </div>
+                    <div class="nota" onclick="tec(8)">
+                        <p>G</p>
+                    </div>
+                    <div class="nota" onclick="tec(9)">
+                        <p>G#</p>
+                    </div>
+                    <div class="nota" onclick="tec(10)">
+                        <p>A</p>
+                    </div>
+                    <div class="nota" onclick="tec(11)">
+                        <p>A#</p>
+                    </div>
+                    <div class="nota" onclick="tec(12)">
+                        <p>B</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="botoes" id="botao11" style="display: none;">
+            <button onclick="voltar(10)" class="btn2">Voltar</button>
+            <button onclick="avancar(11)" class="btn2">Próximo</button>
+        </div>
+        <div id="aula12" class="aula1" style="display: none;">
+            <h2>Conteúdo adicional</h2>
+            <div class="videos">
+                <iframe width="330px" height="250px" src="https://www.youtube.com/embed/ekNEZ3YUltA"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <iframe width="320px" height="250px" src="https://www.youtube.com/embed/dwYCLEZjM9s"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="botoes" id="botao12" style="display: none;">
+            <button onclick="voltar(11)" class="btn2">Voltar</button>
+            <button onclick="avancar(12)" class="btn2">Ir para o quiz</button>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <h4>Developed by Victor Hugo &hearts; SPTech &copy; 2022</h4>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    var som1 = new Audio("songs/C.m4a");
+    var som2 = new Audio("songs/C#.m4a");
+    var som3 = new Audio("songs/D.m4a");
+    var som4 = new Audio("songs/D#.m4a");
+    var som5 = new Audio("songs/E.m4a");
+    var som6 = new Audio("songs/F.m4a");
+    var som7 = new Audio("songs/F#.m4a");
+    var som8 = new Audio("songs/G.m4a");
+    var som9 = new Audio("songs/G#.m4a");
+    var som10 = new Audio("songs/A.m4a");
+    var som11 = new Audio("songs/A#.m4a");
+    var som12 = new Audio("songs/B.m4a");
+    
+    function tec(tecla){
+        if (tecla == 1) {
+         som1.play();   
+        }
+         if (tecla == 2) {
+            som2.play(); 
+        }
+         if (tecla == 3) {
+            som3.play(); 
+        }
+         if (tecla == 4) {
+            som4.play(); 
+        }
+         if (tecla == 5) {
+            som5.play(); 
+        }
+         if (tecla == 6) {
+            som6.play(); 
+        }
+         if (tecla == 7) {
+            som7.play(); 
+        }
+         if (tecla == 8) {
+            som8.play(); 
+        }
+         if (tecla == 9) {
+            som9.play(); 
+        }
+         if (tecla == 10) {
+            som10.play(); 
+        }
+         if (tecla == 11) {
+            som11.play(); 
+        }
+         if (tecla == 12) {
+            som12.play(); 
+        }
+    }
+    function avancar(avanco) {
+        if (avanco == 1) {
+            aula1.style.display = 'none';
+            botao1.style.display = 'none';
+            aula2.style.display = 'flex';
+            botao2.style.display = 'flex';
+        }
+        else if (avanco == 2) {
+            aula2.style.display = 'none';
+            botao2.style.display = 'none';
+            aula3.style.display = 'flex';
+            botao3.style.display = 'flex';
+        }
+        else if (avanco == 3) {
+            aula3.style.display = 'none';
+            botao3.style.display = 'none';
+            aula4.style.display = 'flex';
+            botao4.style.display = 'flex';
+        }
+        else if (avanco == 4) {
+            aula4.style.display = 'none';
+            botao4.style.display = 'none';
+            aula5.style.display = 'flex';
+            botao5.style.display = 'flex';
+        }
+        else if (avanco == 5) {
+            aula5.style.display = 'none';
+            botao5.style.display = 'none';
+            aula6.style.display = 'flex';
+            botao6.style.display = 'flex';
+        }
+        else if (avanco == 6) {
+            aula6.style.display = 'none';
+            botao6.style.display = 'none';
+            aula7.style.display = 'flex';
+            botao7.style.display = 'flex';
+        }
+        else if (avanco == 7) {
+            aula7.style.display = 'none';
+            botao7.style.display = 'none';
+            aula8.style.display = 'flex';
+            botao8.style.display = 'flex';
+        }
+        else if (avanco == 8) {
+            aula8.style.display = 'none';
+            botao8.style.display = 'none';
+            aula9.style.display = 'flex';
+            botao9.style.display = 'flex';
+        }
+        else if (avanco == 9) {
+            aula9.style.display = 'none';
+            botao9.style.display = 'none';
+            aula10.style.display = 'flex';
+            botao10.style.display = 'flex';
+        }
+        else if (avanco == 10) {
+            aula10.style.display = 'none';
+            botao10.style.display = 'none';
+            aula11.style.display = 'flex';
+            botao11.style.display = 'flex';
+        }
+        else if (avanco == 11) {
+            aula11.style.display = 'none';
+            botao11.style.display = 'none';
+            aula12.style.display = 'flex';
+            botao12.style.display = 'flex';
+        }
+        else if (avanco == 12) {
+            alert("Parabéns, Você finalizou a primeira aula")
+            window.location = 'quiz.html';
+        }
+    }
+    function voltar(volta) {
+        if (volta == 1) {
+            aula1.style.display = 'flex';
+            botao1.style.display = 'flex';
+            aula2.style.display = 'none';
+            botao2.style.display = 'none';
+        }
+        else if (volta == 2) {
+            aula2.style.display = 'flex';
+            botao2.style.display = 'flex';
+            aula3.style.display = 'none';
+            botao3.style.display = 'none';
+        }
+        else if (volta == 3) {
+            aula3.style.display = 'flex';
+            botao3.style.display = 'flex';
+            aula4.style.display = 'none';
+            botao4.style.display = 'none';
+        }
+        else if (volta == 4) {
+            aula4.style.display = 'flex';
+            botao4.style.display = 'flex';
+            aula5.style.display = 'none';
+            botao5.style.display = 'none';
+        }
+        else if (volta == 5) {
+            aula5.style.display = 'flex';
+            botao5.style.display = 'flex';
+            aula6.style.display = 'none';
+            botao6.style.display = 'none';
+        }
+        else if (volta == 6) {
+            aula6.style.display = 'flex';
+            botao6.style.display = 'flex';
+            aula7.style.display = 'none';
+            botao7.style.display = 'none';
+        }
+        else if (volta == 7) {
+            aula7.style.display = 'flex';
+            botao7.style.display = 'flex';
+            aula8.style.display = 'none';
+            botao8.style.display = 'none';
+        }
+        else if (volta == 8) {
+            aula8.style.display = 'flex';
+            botao8.style.display = 'flex';
+            aula9.style.display = 'none';
+            botao9.style.display = 'none';
+        }
+        else if (volta == 9) {
+            aula9.style.display = 'flex';
+            botao9.style.display = 'flex';
+            aula10.style.display = 'none';
+            botao10.style.display = 'none';
+        }
+        else if (volta == 10) {
+            aula10.style.display = 'flex';
+            botao10.style.display = 'flex';
+            aula11.style.display = 'none';
+            botao11.style.display = 'none';
+        }
+        else if (volta == 11) {
+            aula11.style.display = 'flex';
+            botao11.style.display = 'flex';
+            aula12.style.display = 'none';
+            botao12.style.display = 'none';
+        }
+    }
+</script>

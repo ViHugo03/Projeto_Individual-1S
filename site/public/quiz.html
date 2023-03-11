@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="imgs/icone-teclado.png">
+    <title> Keyboard | Classroom</title>
+
+    <link rel="stylesheet" href="css/jogo.css">
+
+    <script src="js/function.js"></script>
+
+    <script src="./js/funcoes.js"></script>
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <h1 class="titulo">Keyboard</h1>
+        </div>
+    </div>
+    <div class="banner">
+        <div id="quiz" class="quiz">
+            <h3> Fixando a Máteria</h3>
+            <p>Agora você irá responder um quiz, para sabermos se você está preparado para ir para a próxima aula, fique
+                tranquilo as perguntas que serão feitas estão relacionadas com o conteúdo ds aulas, lembre-se de usar
+                acento quando responeder
+            </p>
+            <h3>Bons Estudos</h3>
+        </div>
+        <div class="botao1" id="botao">
+            <button onclick="avancar(1)" class="btn2">Próxima</button>
+        </div>
+        <div id="quiz1" class="quiz" style="display: none;">
+            <div class="container1">
+                <div id="perguntas">
+                    <span id="msg1"></span>
+                </div>
+                <input type="text" id="ipt_resp" style="height: 30px;">
+
+            </div>
+        </div>
+        <div class="botao1" id="botao1" style="display: none; justify-content: space-between;">
+
+            <button onclick="verificar()" class="btn2">Validar resposta</button>
+            <button onclick="salvar()" class="btn2" id="save" style="display: none; justify-content: center;">Salvar
+                pontuação</button>
+            <button onclick="refazer1()" class="btn2" id="refazer" style="display: none; justify-content: center;">Refazer Quiz</button>
+        </div>
+        <div class="teste">
+            <div id="pontos" class="pontos">
+                <span id="msg">span>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <h4>Developed by Victor Hugo &hearts;SPTech &copy; 2022</h4>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    msg.innerHTML = `Pontuação: ${totalVar}`;
+
+    var pergunta = ['Qual é a regra de formação de escalas maiores?', 'Quantas notas tem em uma escala maior?',
+        'Quantas notas tem em uma escala cromática?', 'Na escala de Dó maior quem é o IVº grau?',
+        'Quem é a nota que da nome a escala?', 'Qual nota tem função de dominante em uma escala maior?',
+        'Como é chamado o grupo de notas que compõem um acorde?', 'Na escala de Sol maior quem é o Vº?',
+        '(C- C#- D- D# -E- F- F#- G- G#- A- A#- B#) essa escala pertence a qual determinação? Maior ou Cromática?',
+        'A escala cromática é formada apenas por semitons?', 'Quantos semitons tem em uma escala maior?',
+        'Podemos criar campos harmônicos a partir de escalas cromáticas?',
+        'Qual cifra representa o Iº da escala de Dó maior?', 'Qual cifra representa o IVº da escala de Dó maior',
+        'Oque diferencia uma escala da outra?'
+    ];
+
+    function avancar(avanco) {
+        if (avanco == 1) {
+            quiz.style.display = 'none';
+            botao.style.display = 'none';
+            quiz1.style.display = 'flex';
+            botao1.style.display = 'flex';
+            msg1.innerHTML = `${pergunta[0]}`;
+
+        }
+    }
+
+    function verificar() {
+        var resposta = ipt_resp.value.toUpperCase();
+        if (resposta != '') {
+            console.log(resposta)
+            if (msg1.innerHTML == `${pergunta[0]}`) {
+                if (resposta == 'T-T-ST-T-T-T-ST') {
+                    ipt_resp.value = '';
+                    totalVar += 100;
+                    msg1.innerHTML = `${pergunta[1]}`;
+                } else {
+                    alert("Desculpe resposta incorreta")
+                    ipt_resp.value = '';
+                    totalVar -= 50;
+                    msg1.innerHTML = `${pergunta[1]}`;
+                }
+            } else if (msg1.innerHTML == `${pergunta[1]}`) {
+                if (resposta == '7') {
+                    ipt_resp.value = '';
+                    totalVar += 100;
+                    msg1.innerHTML = `${pergunta[2]}`;
+                } else {
+                    alert("Desculpe resposta incorreta")
+                    ipt_resp.value = '';
+                    totalVar -= 50;
+                    msg1.innerHTML = `${pergunta[2]}`;
+                }
+            } else if (msg1.innerHTML == `${pergunta[2]}`) {
+                if (resposta == '12') {
+                    ipt_resp.value = '';
+                    totalVar += 100;
+                    msg1.innerHTML = `${pergunta[3]}`;
+                } else {
+                    alert("Desculpe resposta incorreta")
+                    ipt_resp.value = '';
+                    totalVar -= 50;
+                    msg1.innerHTML = `${pergunta[3]}`;
+                }
+            } else if (msg1.innerHTML == `${pergunta[3]}`) {
+                if (resposta == 'FÁ MAIOR' || resposta == 'FÁ' || resposta == 'F') {
+                    ipt_resp.value = '';
+                    totalVar += 100;
+                    msg1.innerHTML = `${pergunta[4]}`;
+                } else {
+                    alert("Desculpe resposta incorreta")
+                    ipt_resp.value = '';
+                    totalVar -= 50;
+                    msg1.innerHTML = `${pergunta[4]}`;
+                }
+            } else if (msg1.innerHTML == `${pergunta[4]}`) {
+                if (resposta == 'TÔNICA' || resposta == 'Iº') {
+                    ipt_resp.value = '';
+                    totalVar += 100;
+                    msg1.innerHTML = `${pergunta[5]}`;
+                } else {
+                    alert("Desculpe resposta incorreta")
+                    ipt_resp.value = '';
+                    totalVar -= 50;
+                    msg1.innerHTML = `${pergunta[5]}`;
+                }
+            } else if (msg1.innerHTML == `${pergunta[5]}`) {
+                if (resposta == 'Vº') {
+                    ipt_resp.value = '';
+                    totalVar += 100;
+                    msg1.innerHTML = `${pergunta[6]}`;
+                } else {
+                    alert("Desculpe resposta incorreta")
+                    ipt_resp.value = '';
+                    totalVar -= 50;
+                    msg1.innerHTML = `${pergunta[6]}`;
+                }
+            } else if (msg1.innerHTML == `${pergunta[6]}`) {
+                if (resposta == 'TRÍADE') {
+                    ipt_resp.value = '';
+                    totalVar += 100;
+                    msg1.innerHTML = `${pergunta[7]}`;
+                } else {
+                    alert("Desculpe resposta incorreta")
+                    ipt_resp.value = '';
+                    totalVar -= 50;
+                    msg1.innerHTML = `${pergunta[7]}`;
+                }
+            } else if (msg1.innerHTML == `${pergunta[7]}`) {
+                if (resposta == 'RÉ  MAIOR' || resposta == 'D' || resposta == 'RÉ') {
+                    ipt_resp.value = '';
+                    totalVar += 100;
+                    msg1.innerHTML = `${pergunta[8]}`;
+                } else {
+                    alert("Desculpe resposta incorreta")
+                    ipt_resp.value = '';
+                    totalVar -= 50;
+                    msg1.innerHTML = `${pergunta[8]}`;
+                }
+            } else if (msg1.innerHTML == `${pergunta[8]}`) {
+                if (resposta == 'CROMÁTICA') {
+                    ipt_resp.value = '';
+                    totalVar += 100;
+                    msg1.innerHTML = `${pergunta[9]}`;
+                } else {
+                    alert("Desculpe resposta incorreta")
+                    ipt_resp.value = '';
+                    totalVar -= 50;
+                    msg1.innerHTML = `${pergunta[9]}`;
+                }
+            } else if (msg1.innerHTML == `${pergunta[9]}`) {
+                if (resposta == 'SIM') {
+                    ipt_resp.value = '';
+                    totalVar += 100;
+                    msg1.innerHTML = `${pergunta[10]}`;
+                } else {
+                    alert("Desculpe resposta incorreta")
+                    ipt_resp.value = '';
+                    totalVar -= 50;
+                    msg1.innerHTML = `${pergunta[10]}`;
+
+                }
+            } else if (msg1.innerHTML == `${pergunta[10]}`) {
+                if (resposta == '2') {
+                    ipt_resp.value = '';
+                    totalVar += 100;
+                    msg1.innerHTML = `${pergunta[11]}`;
+                } else {
+                    alert("Desculpe resposta incorreta")
+                    ipt_resp.value = '';
+                    totalVar -= 50;
+                    msg1.innerHTML = `${pergunta[11]}`;
+                }
+            } else if (msg1.innerHTML == `${pergunta[11]}`) {
+                if (resposta == 'NÃO') {
+                    ipt_resp.value = '';
+                    totalVar += 100;
+                    msg1.innerHTML = `${pergunta[12]}`;
+                } else {
+                    alert("Desculpe resposta incorreta")
+                    ipt_resp.value = '';
+                    totalVar -= 50;
+                    msg1.innerHTML = `${pergunta[12]}`;
+                }
+            } else if (msg1.innerHTML == `${pergunta[12]}`) {
+                if (resposta == 'C') {
+                    ipt_resp.value = '';
+                    totalVar += 100;
+                    msg1.innerHTML = `${pergunta[13]}`;
+                } else {
+                    alert("Desculpe resposta incorreta")
+                    ipt_resp.value = '';
+                    totalVar -= 50;
+                    msg1.innerHTML = `${pergunta[13]}`;
+                }
+            } else if (msg1.innerHTML == `${pergunta[13]}`) {
+                if (resposta == 'F') {
+                    ipt_resp.value = '';
+                    totalVar += 100;
+                    msg1.innerHTML = `${pergunta[14]}`;
+                } else {
+                    alert("Desculpe resposta incorreta")
+                    ipt_resp.value = '';
+                    totalVar -= 50;
+                    msg1.innerHTML = `${pergunta[14]}`;
+                }
+            } else if (msg1.innerHTML == `${pergunta[14]}`) {
+                if (resposta == 'A DISPOSIÇÃO DE SEUS INTERVALOS') {
+                    ipt_resp.value = '';
+                    totalVar += 100;
+                    if (totalVar >= 700) {
+                        alert(
+                            "Parabéns, Você finalizou por completo a primeira aula, clique no botão salvar para ir para próxima aula"
+                        )
+                        save.style.display = 'flex';
+                    } 
+                    else {
+                        alert(
+                            "Você não Alcançou a pontuação necessária para ir para próxima aula, clique em refazer quiz para tentar novamente"
+                        )
+                        refazer.style.display = 'flex';
+                    }
+                }
+                else {                    
+                    alert("Desculpe resposta incorreta")
+                    totalVar -= 50;
+                    alert(
+                            "Você não Alcançou a pontuação necessária para ir para próxima aula, clique em refazer quiz para tentar novamente"
+                        )
+                        refazer.style.display = 'flex';
+                }
+            
+            } 
+                
+
+
+        }
+        else{
+            alert("Insira alguma resposta")
+        }
+        msg.innerHTML = `Pontuação: ${totalVar}`
+    }
+
+    function salvar() {
+        if (totalVar >= 700) {
+            console.log(sessionStorage)
+            var idUsuario = sessionStorage.ID_USUARIO
+            console.log(idUsuario)
+            var idAula = sessionStorage.ID_AULA
+            fetch("/usuarios/salvar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    // crie um atributo que recebe o valor recuperado aqui
+                    // Agora vá para o arquivo routes/usuario.js
+                    totalServer: totalVar,
+                    idAlunoServer: idUsuario,
+                    idAulaServer: idAula
+                })
+            }).then(function (resposta) {
+
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok) {
+
+                    setTimeout(() => {
+                        window.location = "sala.html";
+                    }, "2000")
+                }
+            }).catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+                // finalizarAguardar();
+            });
+        } else {
+            alert("Você não alcançou a Pontuação mínima para passar para a proxíma aula ")
+            refazer.style.display = 'block';
+        }
+    }
+
+    function refazer1() {
+        window.location.reload()
+    }
+</script>
